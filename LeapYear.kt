@@ -1,6 +1,6 @@
 import java.util.*
 
-fun main(args: Array<String>){
+fun main() {
     val num1 = Scanner(System.`in`)
     val year = num1.nextInt()
     val leapYear = isLeapYear(year)
