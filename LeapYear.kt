@@ -1,3 +1,4 @@
+import java.lang.Exception
 import java.util.*
 
 
@@ -6,7 +7,15 @@ import java.util.*
  */
 fun main() {
     val num1 = Scanner(System.`in`)
-    val year = num1.nextInt()
+    val year: Int
+    try {
+        year = num1.nextInt()
+    }
+    catch (e : Exception){
+        println("Invalid type")
+        return
+    }
+
     val leapYear = isLeapYear(year)
     if (leapYear)
         println("$year is a leap year")
